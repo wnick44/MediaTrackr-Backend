@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topicMap xmlns="http://topicmaps.org" version="2.0">
+    <topic id="media-type">
+        <name><value>Media Type</value></name>
+    </topic>
+    <topic id="creator">
+    <name><value>Creator</value></name>
+  </topic>
+
+  <topic id="publisher">
+    <name><value>Publisher</value></name>
+  </topic>
+
+  <topic id="format">
+    <name><value>Format</value></name>
+  </topic>
+
+  <!-- Format Class Extensions -->
+  <topic id="physical-format">
+    <instanceOf><topicRef href="#format"/></instanceOf>
+    <name><value>Physical Format</value></name>
+  </topic>
+
+  <topic id="digital-format">
+    <instanceOf><topicRef href="#format"/></instanceOf>
+    <name><value>Digital Format</value></name>
+  </topic>
+
+  <!-- ========================================== -->
+  <!-- 2. OCCURRENCE TYPES (DATA ATTRIBUTES)      -->
+  <!-- ========================================== -->
+  <topic id="storage-location">
+    <name><value>Storage Location</value></name>
+  </topic>
+
+  <topic id="digital-access-url">
+    <name><value>Digital Access URL</value></name>
+  </topic>
+
+  <topic id="nas-network-path">
+    <name><value>NAS Network Path</value></name>
+  </topic>
+
+  <!-- ========================================== -->
+  <!-- 3. ASSOCIATION TYPES (RELATIONSHIPS)        -->
+  <!-- ========================================== -->
+  <topic id="created-by">
+    <name><value>Created By</value></name>
+  </topic>
+
+  <topic id="published-by">
+    <name><value>Published By</value></name>
+  </topic>
+
+  <topic id="has-format">
+    <name><value>Has Format</value></name>
+  </topic>
+
+  <topic id="adaptation-of">
+    <name><value>Adaptation Of</value></name>
+  </topic>
+
+<!-- ========================================== -->
+  <!-- 4. ROLE TYPES (SEMANTIC CONTEXTS)          -->
+  <!-- ========================================== -->
+  <topic id="role-work">
+    <name><value>Work</value></name>
+  </topic>
+
+  <topic id="role-artist">
+    <name><value>Artist</value></name>
+  </topic>
+
+  <topic id="role-distributor">
+    <name><value>Distributor</value></name>
+  </topic>
+
+  <topic id="role-medium">
+    <name><value>Medium</value></name>
+  </topic>
+
+  <topic id="role-source-work">
+    <name><value>Source Work</value></name>
+  </topic>
+
+  <topic id="role-adapted-work">
+    <name><value>Adapted Work</value></name>
+  </topic>
+
+</topicMap>

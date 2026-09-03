@@ -1,0 +1,46 @@
+plugins{
+	 id 'war' 
+	 id 'jacoco'
+	 id 'checkstyle'
+	 id 'java'
+}
+
+group = "com.mediatrackr"
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+	providedCompile 'javax.ws.rs:javax.ws.rs-api:2.1.1'
+	
+	providedCompile 'javax.annotation:javax.annotation-api:1.3.2'
+	providedCompile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+	
+	providedCompile 'net.ontopia:ontopia-engine:5.4.0'
+	compileOnly 'jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0'
+	
+	implementation 'com.unboundid:unboundid-ldapsdk:7.0.1'
+	implementation 'com.auth0:java-jwt:4.4.0'
+
+	implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.2'
+
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
+    testImplementation 'org.mockito:mockito-core:5.14.0'
+    
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.14.0'
+	testImplementation "io.zonky.test:embedded-postgres:2.0.7"
+
+    // 4. Test Execution Engine Runtime Setup
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+}
+
+test {
+    useJUnitPlatform()
+    
+    // Optional: Shows clear test results inside the terminal console window
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

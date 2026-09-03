@@ -1,0 +1,3 @@
+[submodule "Mediatrackr-frontend"]
+	path = Mediatrackr-frontend
+	url = https://github.com/wnick44/Mediatrackr-frontend.git

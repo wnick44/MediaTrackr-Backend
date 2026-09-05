@@ -3,7 +3,7 @@ plugins{
 	 id 'jacoco'
 	 id 'checkstyle'
 	 id 'java'
-	 id 'com.github.node-gradle.node'
+	 id ('com.github.node-gradle.node') version "7.1.0"
 }
 
 group = "com.mediatrackr"
@@ -18,20 +18,16 @@ node{
 	nodeProjectDir = file("${projectDir}/Mediatrackr-frontend")
 }
 
-task.register('copyReactBuild', Copy){
-	dependsOn.tasks.named('npm_run_build')
+tasks.register('copyReactBuild', Copy){
+	dependsOn 'npm_run_build'
 
 
 	from file("${projectDir}/Mediatrackr-frontend/dist")
 	into file("${projectDir}/src/main/webapp")
 }
 
-task.named('war'){
+tasks.named('war'){
 	dependsOn 'copyReactBuild'
-}
-
-task.name('clean'){
-	dependsOn task.named('npm_run_clean').configure{ throwsException = false}
 }
 
 dependencies {

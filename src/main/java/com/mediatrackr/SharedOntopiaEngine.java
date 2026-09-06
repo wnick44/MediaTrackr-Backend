@@ -18,8 +18,8 @@ import net.ontopia.topicmaps.xml.XTMTopicMapReader;
 
 @ApplicationScoped
 public class SharedOntopiaEngine {
-    private final TopicMapIF topicMap;
-    private final TopicMapStoreIF store;
+    private TopicMapIF topicMap;
+    private TopicMapStoreIF store;
     private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 
     public SharedOntopiaEngine(){
@@ -42,6 +42,12 @@ public class SharedOntopiaEngine {
     }
 
     public boolean addMedia(Media media){
-
+        media.toTopicMap(store);
+        try{
+            store.commit();
+            return true;
+        }catch(Exception e){
+            return false;
+        }
     }
 }

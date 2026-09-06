@@ -1,0 +1,7 @@
+net.ontopia.persistence.query.sql.Poolman = false
+net.ontopia.topicmaps.impl.rdbms.Database = postgres
+
+net.ontopia.persistence.proxy.DriverClass = org.postgres.Driver
+net.ontopia.persistence.proxy.ConnectionString = jdbc:postgresql://localhost:5432/mediatrackr
+net.ontopia.persistence.proxy.User = mediatrackr
+net.ontopia.persistence.proxy.password = suP3rb@d

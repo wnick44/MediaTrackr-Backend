@@ -3,7 +3,7 @@ import javax.ws.rs.ApplicationPath;
 
 import jakarta.inject.Inject;
 
-@ApplicationPath("/api")
+@ApplicationPath("/comic")
 public class ComicService {
     @Inject SharedOntopiaEngine ontopiaEngine;
 }

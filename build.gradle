@@ -51,6 +51,8 @@ dependencies {
 	testImplementation 'org.mockito:mockito-junit-jupiter:5.14.0'
 	testImplementation "io.zonky.test:embedded-postgres:2.0.7"
 
+	testImplementation("org.apache.directory.server:apacheds-all:2.0.0.AM27")
+
     // 4. Test Execution Engine Runtime Setup
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
 }

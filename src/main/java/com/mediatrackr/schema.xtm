@@ -4,42 +4,42 @@
         <name><value>Media Type</value></name>
     </topic>
     <topic id="creator">
-    <name><value>Creator</value></name>
-  </topic>
+      <name><value>Creator</value></name>
+    </topic>
 
-  <topic id="publisher">
-    <name><value>Publisher</value></name>
-  </topic>
+    <topic id="publisher">
+      <name><value>Publisher</value></name>
+    </topic>
 
-  <topic id="format">
-    <name><value>Format</value></name>
-  </topic>
+    <topic id="format">
+      <name><value>Format</value></name>
+    </topic>
 
-  <!-- Format Class Extensions -->
-  <topic id="physical-format">
-    <instanceOf><topicRef href="#format"/></instanceOf>
-    <name><value>Physical Format</value></name>
-  </topic>
+    <!-- Format Class Extensions -->
+    <topic id="physical-format">
+      <instanceOf><topicRef href="#format"/></instanceOf>
+      <name><value>Physical Format</value></name>
+    </topic>
 
-  <topic id="digital-format">
-    <instanceOf><topicRef href="#format"/></instanceOf>
-    <name><value>Digital Format</value></name>
-  </topic>
+    <topic id="digital-format">
+      <instanceOf><topicRef href="#format"/></instanceOf>
+      <name><value>Digital Format</value></name>
+    </topic>
 
-  <!-- ========================================== -->
-  <!-- 2. OCCURRENCE TYPES (DATA ATTRIBUTES)      -->
-  <!-- ========================================== -->
-  <topic id="storage-location">
-    <name><value>Storage Location</value></name>
-  </topic>
+    <!-- ========================================== -->
+    <!-- 2. OCCURRENCE TYPES (DATA ATTRIBUTES)      -->
+    <!-- ========================================== -->
+    <topic id="storage-location">
+      <name><value>Storage Location</value></name>
+    </topic>
 
-  <topic id="digital-access-url">
-    <name><value>Digital Access URL</value></name>
-  </topic>
+    <topic id="digital-access-url">
+      <name><value>Digital Access URL</value></name>
+    </topic>
 
-  <topic id="nas-network-path">
-    <name><value>NAS Network Path</value></name>
-  </topic>
+    <topic id="nas-network-path">
+      <name><value>NAS Network Path</value></name>
+    </topic>
 
   <!-- ========================================== -->
   <!-- 3. ASSOCIATION TYPES (RELATIONSHIPS)        -->

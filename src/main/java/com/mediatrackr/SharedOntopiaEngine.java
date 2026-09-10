@@ -1,15 +1,12 @@
 package com.mediatrackr;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import com.mediatrackr.dao.Media;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
-import net.ontopia.topicmaps.core.TopicMapBuilderIF;
-import net.ontopia.topicmaps.core.TopicMapIF;
 import net.ontopia.topicmaps.core.TopicMapStoreIF;
 import net.ontopia.topicmaps.impl.rdbms.RDBMSStoreFactory;
 import net.ontopia.topicmaps.impl.rdbms.RDBMSTopicMapStore;
@@ -18,11 +15,10 @@ import net.ontopia.topicmaps.xml.XTMTopicMapReader;
 
 @ApplicationScoped
 public class SharedOntopiaEngine {
-    private TopicMapIF topicMap;
     private TopicMapStoreIF store;
-    private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 
-    public SharedOntopiaEngine(){
+    @PostConstruct
+    public void init(){
         try {
             store = new RDBMSTopicMapStore("db.props");
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -49,5 +45,9 @@ public class SharedOntopiaEngine {
         }catch(Exception e){
             return false;
         }
+    }
+
+    public Media getMedia(String tolog){
+        
     }
 }

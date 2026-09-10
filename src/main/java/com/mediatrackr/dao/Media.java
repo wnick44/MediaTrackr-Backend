@@ -1,7 +1,6 @@
 package com.mediatrackr.dao;
 
 import jakarta.xml.bind.annotation.XmlElement;
-import net.ontopia.topicmaps.core.TopicMapIF;
 import net.ontopia.topicmaps.core.TopicMapStoreIF;
 
 public abstract class Media {

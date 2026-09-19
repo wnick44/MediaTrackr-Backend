@@ -15,18 +15,17 @@ import javax.ws.rs.core.Response;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 
 import com.mediatrackr.dao.Books;
-import com.mediatrackr.dao.Media;
 
 import jakarta.inject.Inject;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
-import jakarta.xml.bind.PropertyException;
 import net.ontopia.topicmaps.query.core.InvalidQueryException;
 
 @ApplicationPath("/book")
 public class BookService {
-    @Inject SharedOntopiaEngine ontopiaEngine;
+    @Inject 
+    SharedOntopiaEngine ontopiaEngine;
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

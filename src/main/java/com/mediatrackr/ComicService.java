@@ -24,7 +24,8 @@ import net.ontopia.topicmaps.query.core.InvalidQueryException;
 
 @ApplicationPath("/comic")
 public class ComicService {
-    @Inject SharedOntopiaEngine ontopiaEngine;
+    @Inject
+    SharedOntopiaEngine ontopiaEngine;
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

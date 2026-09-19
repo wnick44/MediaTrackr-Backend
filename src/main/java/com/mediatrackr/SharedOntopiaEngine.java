@@ -7,9 +7,18 @@ import com.mediatrackr.dao.Media;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
+
+import net.ontopia.topicmaps.query.impl.basic.QueryProcessor;
+
+import net.ontopia.topicmaps.core.TopicMapIF;
 import net.ontopia.topicmaps.core.TopicMapStoreIF;
+
+
 import net.ontopia.topicmaps.impl.rdbms.RDBMSStoreFactory;
 import net.ontopia.topicmaps.impl.rdbms.RDBMSTopicMapStore;
+import net.ontopia.topicmaps.query.core.InvalidQueryException;
+import net.ontopia.topicmaps.query.core.QueryProcessorIF;
+import net.ontopia.topicmaps.query.core.QueryResultIF;
 import net.ontopia.topicmaps.xml.XTMTopicMapReader;
 
 
@@ -47,7 +56,15 @@ public class SharedOntopiaEngine {
         }
     }
 
-    public Media getMedia(String tolog){
+    public Media getMedia(String tolog) throws InvalidQueryException{
+        TopicMapIF topicMap = store.getTopicMap();
+
+        // Create a Tolog query processor
+        QueryProcessorIF processor = new QueryProcessor(topicMap);
+        QueryResultIF result = processor.execute(tolog);
+
+        
+
         
     }
 }

@@ -39,7 +39,7 @@ public class BookService {
         }
     }
     @GET
-    @Path("/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBook(@PathParam("id")int id) throws InvalidQueryException, JAXBException{
         String tolog = "";

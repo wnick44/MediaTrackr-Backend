@@ -39,7 +39,7 @@ public class ComicService {
         }
     }
     @GET
-    @Path("/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getComic(@PathParam("id") int id) throws InvalidQueryException, JAXBException{
         String tolog = "";
